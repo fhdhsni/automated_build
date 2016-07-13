@@ -2,6 +2,7 @@
     "name": "automated_build",
     "version": "1.0.0",
     "private": true,
+    "engines": "6.2.2",
     "scripts": {
         "//": "rebuild packages if you it didn't already",
         "rebuild": "[ ! -f node_modules/.bin ] && echo 'Building npm modules:' && npm rebuild",
