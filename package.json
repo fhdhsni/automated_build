@@ -3,8 +3,9 @@
     "version": "1.0.0",
     "private": true,
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
+        "//": "rebuild packages if you it didn't already",
         "rebuild": "[ ! -f node_modules/.bin ] && echo 'Building npm modules:' && npm rebuild",
+        "//": "run default task",
         "default": "npm run rebuild && echo '\n\nBuild OK'"
     },
     "author": "fhd",
