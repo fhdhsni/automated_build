@@ -4,7 +4,8 @@
     "private": true,
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "default": "echo '\n\nBuild OK'"
+        "rebuild": "[ ! -f node_modules/.bin ] && echo 'Building npm modules:' && npm rebuild",
+        "default": "npm run rebuild && echo '\n\nBuild OK'"
     },
     "author": "fhd",
     "license": "ISC"
