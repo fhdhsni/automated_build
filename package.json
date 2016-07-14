@@ -1,21 +1,21 @@
 {
-    "name": "automated_build",
-    "version": "1.0.0",
-    "private": true,
-    "engines": {
-        "node": "6.2.2"
-    },
-    "scripts": {
-        "//": "check Node version",
-        "checkNode": "echo '\nChecking Node version...\n' && (check-node-version --package --quiet)",
-        "//": "if binary of packages doesn't exist, build it",
-        "rebuild": "[ ! -d node_modules/.bin ] && echo 'Building npm modules...\n' && npm rebuild",
-        "default": "npm run rebuild; npm run checkNode && echo '\n\nBuild OK'"
-    },
-    "author": "Farhad hsni",
-    "license": "ISC",
-    "devDependencies": {
-        "check-node-version": "^1.1.1",
-        "semver": "^5.2.0"
-    }
+  "name": "automated_build",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": "6.2.2"
+  },
+  "scripts": {
+    "//": "if binary of packages doesn't exist, build it",
+    "checkNode": "echo '\nChecking Node version...\n' && (check-node-version --package --quiet)",
+    "rebuild": "[ ! -d node_modules/.bin ] && echo 'Building npm modules...\n' && npm rebuild",
+    "default": "npm run rebuild; npm run checkNode && echo '\n\nBuild OK'"
+  },
+  "author": "Farhad hsni",
+  "license": "ISC",
+  "devDependencies": {
+    "check-node-version": "^1.1.1",
+    "eslint": "^3.0.1",
+    "semver": "^5.2.0"
+  }
 }
