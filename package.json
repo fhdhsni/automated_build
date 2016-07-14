@@ -9,10 +9,10 @@
         "//": "check Node version",
         "checkNode": "!(check-node-version --package --quiet) && echo 'wrong node version'",
         "//": "if binary of packages doesn't exist, build it",
-        "rebuild": "[ ! -f node_modules/.bin ] && echo 'Building npm modules:' && npm rebuild",
+        "rebuild": "[ ! -d node_modules/.bin ] && echo 'Building npm modules:' && npm rebuild",
         "default": "npm run rebuild && echo '\n\nBuild OK'"
     },
-    "author": "fhd",
+    "author": "Farhad hsni",
     "license": "ISC",
     "devDependencies": {
         "check-node-version": "^1.1.1",
