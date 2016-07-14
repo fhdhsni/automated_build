@@ -15,6 +15,7 @@
   "author": "Farhad hsni",
   "license": "ISC",
   "devDependencies": {
+    "blanket": "^1.2.3",
     "browser-sync": "^2.13.0",
     "chai": "^3.5.0",
     "check-node-version": "^1.1.1",
