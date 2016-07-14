@@ -1,25 +1,28 @@
 {
-  "name": "automated_build",
-  "version": "1.0.0",
-  "private": true,
-  "engines": {
-    "node": "6.2.2"
-  },
-  "scripts": {
-    "//": "if binary of packages doesn't exist, build it",
-    "checkNode": "echo '\nChecking Node version...\n' && (check-node-version --package --quiet)",
-    "rebuild": "[ ! -d node_modules/.bin ] && echo 'Building npm modules...\n' && npm rebuild",
-    "default": "npm run rebuild; npm run checkNode && echo '\n\nBuild OK'"
-  },
-  "author": "Farhad hsni",
-  "license": "ISC",
-  "devDependencies": {
-    "check-node-version": "^1.1.1",
-    "eslint": "^3.0.1",
-    "eslint-config-airbnb": "^9.0.1",
-    "eslint-plugin-import": "^1.10.2",
-    "eslint-plugin-jsx-a11y": "^1.5.5",
-    "eslint-plugin-react": "^5.2.2",
-    "semver": "^5.2.0"
-  }
+    "name": "automated_build",
+    "version": "1.0.0",
+    "private": true,
+    "engines": {
+        "node": "6.2.2"
+    },
+    "scripts": {
+        "//": "if binary of packages doesn't exist, build it",
+        "rebuild": "[ ! -d node_modules/.bin ] && echo 'Building npm modules...\n' && npm rebuild",
+        "//": "Check Node Version",
+        "checkNode": "echo '\nChecking Node version...\n' && (check-node-version --package --quiet)",
+        "//": "lint js files for error",
+        "js:lint": "echo '\nCheck js files' && eslint src/js/**/*.js",
+        "default": "npm run rebuild; npm run checkNode && npm run js:lint && echo '\n\nBuild OK'"
+    },
+    "author": "Farhad hsni",
+    "license": "ISC",
+    "devDependencies": {
+        "check-node-version": "^1.1.1",
+        "eslint": "^3.0.1",
+        "eslint-config-airbnb": "^9.0.1",
+        "eslint-plugin-import": "^1.10.2",
+        "eslint-plugin-jsx-a11y": "^1.5.5",
+        "eslint-plugin-react": "^5.2.2",
+        "semver": "^5.2.0"
+    }
 }
