@@ -1,16 +1,19 @@
 {
-  "name": "automated_build",
-  "version": "1.0.0",
-  "private": true,
-  "engines": "6.2.2",
-  "scripts": {
-    "//": "run default task",
-    "rebuild": "[ ! -f node_modules/.bin ] && echo 'Building npm modules:' && npm rebuild",
-    "default": "npm run rebuild && echo '\n\nBuild OK'"
-  },
-  "author": "fhd",
-  "license": "ISC",
-  "devDependencies": {
-    "semver": "^5.2.0"
-  }
+    "name": "automated_build",
+    "version": "1.0.0",
+    "private": true,
+    "engines": {
+        "node": "6.2.2"
+    },
+    "scripts": {
+        "//": "if binary of packages doesn't exist, build it",
+        "rebuild": "[ ! -f node_modules/.bin ] && echo 'Building npm modules:' && npm rebuild",
+        "default": "npm run rebuild && echo '\n\nBuild OK'"
+    },
+    "author": "fhd",
+    "license": "ISC",
+    "devDependencies": {
+        "check-node-version": "^1.1.1",
+        "semver": "^5.2.0"
+    }
 }
