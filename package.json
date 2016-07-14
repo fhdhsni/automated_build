@@ -7,9 +7,9 @@
     },
     "scripts": {
         "//": "check Node version",
-        "checkNode": "(check-node-version --package --quiet)",
+        "checkNode": "echo '\nChecking Node version...\n' && (check-node-version --package --quiet)",
         "//": "if binary of packages doesn't exist, build it",
-        "rebuild": "[ ! -d node_modules/.bin ] && echo 'Building npm modules:' && npm rebuild",
+        "rebuild": "[ ! -d node_modules/.bin ] && echo 'Building npm modules...\n' && npm rebuild",
         "default": "npm run rebuild; npm run checkNode && echo '\n\nBuild OK'"
     },
     "author": "Farhad hsni",
