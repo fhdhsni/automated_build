@@ -1,9 +1,14 @@
-exports.add = (c, d) => {
-  return c + d;
-};
-exports.minus = (f, g) => {
-  return f - g;
-};
-exports.info = function(cb) {
-  const https = require("https");
-};
+(() => {
+  function add(c, d) {
+    return c + d;
+  }
+  function minus(f, g) {
+    /* subracts two numbers */
+    return f - g;
+  }
+
+  module.exports = {
+    add: add,
+    minus: minus,
+  };
+})();
