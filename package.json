@@ -12,7 +12,7 @@
     "test": "mocha ./test/test.js",
     "rebuild": "[ ! -d node_modules/.bin ] && echo 'Building npm modules...\n' && npm rebuild",
     "checkNode": "echo '\nChecking Node version...\n' && (check-node-version --package --quiet)",
-    "eslint": "echo '\nCheck js files' && eslint src/js/**/*.js",
+    "eslint": "echo '\nCheck js files' && eslint src/js/**/*.js test/test.js",
     "bsync": "browser-sync start --config bs-config.js",
     "default": "npm run rebuild; npm run checkNode && npm run eslint && echo '\n\nBuild OK'"
   },
@@ -28,6 +28,7 @@
     "check-node-version": "^1.1.1",
     "eslint": "^3.0.1",
     "eslint-config-airbnb": "^9.0.1",
+    "eslint-friendly-formatter": "^2.0.6",
     "eslint-plugin-import": "^1.10.2",
     "eslint-plugin-jsx-a11y": "^1.5.5",
     "eslint-plugin-react": "^5.2.2",
