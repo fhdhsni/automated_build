@@ -10,11 +10,13 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['mocha'],
+
+    frameworks: [ 'browserify', 'mocha'],
 
 
     // list of files / patterns to load in the browser
     files: [
+      // 'test/test-compiled.js'
       'test/bundle.js'
     ],
 
@@ -27,9 +29,14 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+      'test/test-compiled.js': [ 'browserify' ]
     },
-
-
+    
+    browserify: {
+      debug: true,
+      output: 'test/bundle.js'
+    },
+    
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter

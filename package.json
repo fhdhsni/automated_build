@@ -6,8 +6,10 @@
     "node": "6.2.2"
   },
   "scripts": {
-      "babel": "babel src/js/script.js -o src/js/script-complied.js && babel test/test.js -o test/test-compiled.js",
-      "test": "npm run babel && browserify test/test-compiled.js -o test/bundle.js && mocha ./test/bundle.js",
+    "k:s": "karma start",
+    "k:r": "browserify test/test-compiled.js -o test/bundle.js && karma run",
+    "babel": "babel src/js/script.js -o src/js/script-complied.js && babel test/test.js -o test/test-compiled.js",
+      "test": "mocha ./test/test.js",
       "rebuild": "[ ! -d node_modules/.bin ] && echo 'Building npm modules...\n' && npm rebuild",
       "checkNode": "echo '\nChecking Node version...\n' && (check-node-version --package --quiet)",
       "eslint": "echo '\nCheck js files' && eslint src/js/**/*.js",
@@ -29,6 +31,7 @@
         "eslint-plugin-jsx-a11y": "^1.5.5",
         "eslint-plugin-react": "^5.2.2",
         "karma": "^1.1.1",
+        "karma-browserify": "^5.1.0",
         "karma-mocha": "^1.1.1",
         "mocha": "^2.5.3",
         "semver": "^5.2.0"
