@@ -16,8 +16,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      // 'test/test-compiled.js'
-      'test/bundle.js'
+      'test/test.js'
     ],
 
 
@@ -29,12 +28,12 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'test/test-compiled.js': [ 'browserify' ]
+      'test/test.js': [ 'browserify' ]
     },
     
     browserify: {
       debug: true,
-      output: 'test/bundle.js'
+      transform: [["babelify", { "presets": ["es2015"] }]]
     },
     
     // test results reporter to use

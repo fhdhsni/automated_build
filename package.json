@@ -7,7 +7,7 @@
   },
   "scripts": {
     "k:s": "karma start",
-    "k:r": "browserify test/test-compiled.js -o test/bundle.js && karma run",
+    "k:r": "karma run",
     "babel": "babel src/js/script.js -o src/js/script-complied.js && babel test/test.js -o test/test-compiled.js",
     "test": "mocha ./test/test.js",
     "rebuild": "[ ! -d node_modules/.bin ] && echo 'Building npm modules...\n' && npm rebuild",
@@ -34,6 +34,7 @@
     "karma": "^1.1.1",
     "karma-browserify": "^5.1.0",
     "karma-mocha": "^1.1.1",
+    "karma-mocha-reporter": "^2.0.4",
     "mocha": "^2.5.3",
     "semver": "^5.2.0"
   }
