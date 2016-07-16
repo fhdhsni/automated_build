@@ -8,7 +8,7 @@
   }
 
   module.exports = {
-    add: add,
-    minus: minus,
+    add,
+    minus,
   };
 })();

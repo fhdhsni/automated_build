@@ -8,11 +8,11 @@
     "scripts": {
         "k:s": "karma start",
         "k:r": "karma run",
-        "babel": "babel src/js/script.js -o src/js/script-complied.js && babel test/test.js -o test/test-compiled.js",
+        "babel": "browserify src/js/script.js -o src/js/bundle.js -t [ babelify --presets [ es2015 ] ]",
         "test": "mocha ./test/test.js",
         "rebuild": "[ ! -d node_modules/.bin ] && echo 'Building npm modules...\n' && npm rebuild",
         "checkNode": "echo '\nChecking Node version...\n' && (check-node-version --package --quiet)",
-        "eslint": "echo '\nCheck js files' && eslint --format 'node_modules/eslint-friendly-formatter' src/js/**/*.js test/test.js",
+        "eslint": "echo '\nLinting JS files...' && eslint --format 'node_modules/eslint-friendly-formatter' src/js/**/*.js test/test.js",
         "bsync": "browser-sync start --config bs-config.js",
         "default": "npm run rebuild; npm run checkNode && npm run eslint && echo '\n\nBuild OK'"
     },
