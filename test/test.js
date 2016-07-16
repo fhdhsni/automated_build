@@ -1,7 +1,7 @@
 /* eslint-disable global-require */
 (() => {
   const assert = require("chai").assert;
-  const script = require("../src/js/script.js");
+  const script = require("../src/js/script");
 
   describe("Addition", () => {
     it("adds positive numbers", () => {
