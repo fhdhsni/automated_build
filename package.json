@@ -1,43 +1,44 @@
 {
-    "name": "automated_build",
-    "version": "1.0.0",
-    "private": true,
-    "engines": {
-        "node": "6.2.2"
-    },
-    "scripts": {
-        "k:server": "echo '\nStarting karma server...\n' && karma start",
-        "test": "karma run",
-        "k:stop": "karma stop",
-        "babel": "browserify src/js/script.js -o src/js/bundle.js -t [ babelify --presets [ es2015 ] ]",
-        "mocha": "mocha ./test/test.js",
-        "rebuild": "[ ! -d node_modules/.bin ] && echo 'Building npm modules...\n' && npm rebuild",
-        "checkNode": "echo '\nChecking Node version...\n' && (check-node-version --package --quiet)",
-        "eslint": "echo '\nLinting JS files...' && eslint --format 'node_modules/eslint-friendly-formatter' src/js/script.js test/test.js",
-        "bsync": "browser-sync start --config bs-config.js",
-        "default": "npm run rebuild; npm run checkNode && npm run eslint && npm test && echo '\n\nBuild OK'"
-    },
-    "author": "Farhad hsni",
-    "license": "ISC",
-    "devDependencies": {
-        "babel-cli": "^6.10.1",
-        "babel-preset-es2015": "^6.9.0",
-        "babelify": "^7.3.0",
-        "browser-sync": "^2.13.0",
-        "browserify": "^13.0.1",
-        "chai": "^3.5.0",
-        "check-node-version": "^1.1.1",
-        "eslint": "^3.0.1",
-        "eslint-config-airbnb": "^9.0.1",
-        "eslint-friendly-formatter": "^2.0.6",
-        "eslint-plugin-import": "^1.10.2",
-        "eslint-plugin-jsx-a11y": "^1.5.5",
-        "eslint-plugin-react": "^5.2.2",
-        "karma": "^1.1.1",
-        "karma-browserify": "^5.1.0",
-        "karma-mocha": "^1.1.1",
-        "karma-mocha-reporter": "^2.0.4",
-        "mocha": "^2.5.3",
-        "semver": "^5.2.0"
-    }
+  "name": "automated_build",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": "6.2.2"
+  },
+  "scripts": {
+    "k:server": "echo '\nStarting karma server...\n' && karma start",
+    "test": "karma run",
+    "k:stop": "karma stop",
+    "babel": "browserify src/js/script.js -o src/js/bundle.js -t [ babelify --presets [ es2015 ] ]",
+    "mocha": "mocha ./test/test.js",
+    "rebuild": "[ ! -d node_modules/.bin ] && echo 'Building npm modules...\n' && npm rebuild",
+    "checkNode": "echo '\nChecking Node version...\n' && (check-node-version --package --quiet)",
+    "eslint": "echo '\nLinting JS files...' && eslint --format 'node_modules/eslint-friendly-formatter' src/js/script.js test/test.js",
+    "bsync": "browser-sync start --config bs-config.js",
+    "default": "npm run rebuild; npm run checkNode && npm run eslint && npm test && echo '\n\nBuild OK'"
+  },
+  "author": "Farhad hsni",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-preset-es2015": "^6.9.0",
+    "babelify": "^7.3.0",
+    "browser-sync": "^2.13.0",
+    "browserify": "^13.0.1",
+    "chai": "^3.5.0",
+    "check-node-version": "^1.1.1",
+    "eslint": "^3.0.1",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-friendly-formatter": "^2.0.6",
+    "eslint-plugin-import": "^1.10.2",
+    "eslint-plugin-jsx-a11y": "^1.5.5",
+    "eslint-plugin-react": "^5.2.2",
+    "karma": "^1.1.1",
+    "karma-browserify": "^5.1.0",
+    "karma-mocha": "^1.1.1",
+    "karma-mocha-reporter": "^2.0.4",
+    "mocha": "^2.5.3",
+    "node-sass": "^3.8.0",
+    "semver": "^5.2.0"
+  }
 }
