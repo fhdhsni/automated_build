@@ -14,7 +14,7 @@
     "prescss": "echo '\nCompiling scss files...\n'",
     "prebuild:js": "echo '\nBuilding js files...\n'",
     "watch:karma": "karma start",
-    "watch:js": "watch 'npm run build:js' src/js/ --ignoreDotFiles --interval=2 --wait=2",
+    "watch:js": "onchange 'src/js/*.js' -e 'src/js/bundle.js' -- npm run build:js",
     "watch:css": "npm run scss -- --watch & npm run autoprefix -- --watch &",
     "watch:bsync": "browser-sync start --config bs-config.js",
     "watch": "run-p watch:*",
@@ -58,7 +58,6 @@
     "npm-run-all": "^2.3.0",
     "onchange": "^2.5.0",
     "postcss-cli": "^2.5.2",
-    "semver": "^5.2.0",
-    "watch": "^0.19.1"
+    "semver": "^5.2.0"
   }
 }
