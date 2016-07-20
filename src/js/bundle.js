@@ -9,7 +9,7 @@
     /* subracts two numbers */
     return f - g;
   }
-  console.log("Hello World!!");
+  console.log("Awesome!");
   module.exports = {
     add: add,
     minus: minus
