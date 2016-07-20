@@ -23,9 +23,9 @@
         "preautoprefix": "echo '\nAdding necessary prefixes to css files...'",
         "autoprefix": "postcss -u autoprefixer --autoprefixer.browsers \"> 5%, ie 9\" -o src/css/style.css src/css/notPrefixedStyle.css",
         "build:css": "npm run scss && npm run autoprefix",
-        "watch:css": "npm run scss -- --watch & npm run autoprefix -- --watch",
+        "watch:css": "npm run scss -- --watch & npm run autoprefix -- --watch &",
         "bsync": "browser-sync start --config bs-config.js",
-        "servers": "npm run karma & npm run bsync & npm run scss &",
+        "servers": "npm run watch:css & npm run karma & npm run bsync &",
         "build": "npm run rebuild; npm run checkNode && npm run eslint && npm test && npm run build:css && echo '\n\nBuild OK'"
     },
     "author": "Farhad hsni",
