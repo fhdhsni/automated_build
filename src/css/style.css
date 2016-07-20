@@ -1,4 +1,14 @@
 body {
-  color: #0f0;
+  color: olive;
   font: 120% Helvetica, sans-serif;
+}
+
+:-webkit-full-screen a {
+  display: -webkit-box;
+  display: flex;
+}
+
+:fullscreen a {
+  display: -webkit-box;
+  display: flex;
 }

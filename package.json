@@ -21,7 +21,7 @@
         "prescss": "echo '\nCompiling scss fiels...\n'",
         "scss": "node-sass src/scss/style.scss src/css/notPrefixedStyle.css --output-style expanded",
         "preautoprefix": "echo '\nAdding necessary prefixes to css files...'",
-        "autoprefix": "postcss -u autoprefixer -o src/css/style.css src/css/notPrefixedStyle.css",
+        "autoprefix": "postcss -u autoprefixer --autoprefixer.browsers \"> 5%, ie 9\" -o src/css/style.css src/css/notPrefixedStyle.css",
         "build:css": "npm run scss && npm run autoprefix",
         "watch:css": "npm run scss -- --watch & npm run autoprefix -- --watch",
         "bsync": "browser-sync start --config bs-config.js",

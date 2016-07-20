@@ -1,4 +1,8 @@
 body {
-  color: #0f0;
+  color: olive;
   font: 120% Helvetica, sans-serif;
+}
+
+:fullscreen a {
+  display: flex;
 }

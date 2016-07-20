@@ -1,7 +1,10 @@
 $font-stack:    Helvetica, sans-serif;
-$primary-color: #0f0;
+$primary-color: olive;
 
 body {
     color: $primary-color;
     font: 120% $font-stack;
+}
+:fullscreen a {
+    display: flex
 }
