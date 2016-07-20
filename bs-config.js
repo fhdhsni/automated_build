@@ -13,13 +13,13 @@
  |
  */
 module.exports = {
-    "ui": {
-        "port": 3001,
-        "weinre": {
-            "port": 8080
-        }
-    },
-  "files": ["src/css/*.css", "src/*.html", "src/js/*.js"],
+  "ui": {
+    "port": 3001,
+    "weinre": {
+      "port": 8080
+    }
+  },
+  "files": ["src/css/style.css", "src/*.html", "src/js/bundle.js"],
   "watchOptions": {},
   "server": "src",
   "proxy": false,
