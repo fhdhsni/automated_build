@@ -2,7 +2,7 @@
 (() => {
   const assert = require("chai").assert;
   const script = require("../src/js/script");
-  
+
   describe("Addition", () => {
     it("adds positive numbers", () => {
       assert.equal(script.add(3, 4), 7);
