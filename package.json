@@ -33,7 +33,7 @@
     "postbuild": "echo '\nBuild OK\n'"
   },
   "author": "Farhad hsni <farhad.hsni@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^6.3.7",
     "babel-cli": "^6.10.1",
@@ -53,6 +53,7 @@
     "karma-browserify": "^5.1.0",
     "karma-mocha": "^1.1.1",
     "karma-mocha-reporter": "^2.0.4",
+    "minimatch": "^3.0.2",
     "mocha": "^2.5.3",
     "node-sass": "^3.8.0",
     "npm-run-all": "^2.3.0",
